@@ -52,3 +52,18 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+group :development do
+  gem 'pry'                 # Substitui o IRB padrão por um console mais avançado e interativo.
+  gem 'pry-rails'           # Integra o Pry ao Rails, permitindo depuração no console do Rails.
+  gem "pry-doc"
+  gem "pry-nav"
+  gem "pry-rails"
+  gem "pry-theme"
+  gem 'pry-byebug'          # Adiciona suporte a breakpoints e controle de execução ao Pry.
+  gem 'better_errors'       # Substitui as páginas de erro padrão do Rails por uma interface interativa e rica em informações.
+  gem 'binding_of_caller'   # Complementa o better_errors, permitindo inspecionar variáveis no stack trace.
+  gem 'rails-footnotes'     # Adiciona notas no rodapé das páginas, mostrando detalhes úteis como sessões e queries SQL.
+  gem 'rack-mini-profiler', require: false # Ferramenta para monitorar a performance da aplicação no ambiente de desenvolvimento.
+end
+
