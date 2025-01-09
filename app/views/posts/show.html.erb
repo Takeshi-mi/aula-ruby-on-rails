@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @post %>
+
+
+<br/>
+<div>
+  <%= link_to "Editar post", edit_post_path(@post) %> |
+  <%= link_to "Voltar para posts", posts_path %>
+
+
+  <%= button_to "Exlcuir postagem", @post, method: :delete %>
+</div>
+
+<br/>
+
+<section class="section comments">
+  <div class="container">
+    <h2 class="subtitle is-5">
+      <strong><%= @post.comments.count %></strong> Comentários
+    </h2>
+    <%= render @post.comments %>
+    <div class="comment-form">
+      <hr />
+      <h3 class="subtitle is-3">Leave a reply</h3>
+      <%= render partial: 'comments/form', locals: { comment: @post.comments.build } %>
+    </div>
+  </div>
+</section>

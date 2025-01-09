@@ -1,0 +1,9 @@
+<p>
+  <strong><%= comment.name %>:</strong>
+  <%= comment.message %>
+  <%= link_to 'Delete', [comment],
+    data: {
+      "turbo-method": :delete,
+      "turbo-confirm": 'Tem certeza que deseja excluir?'
+    } %>
+</p>
